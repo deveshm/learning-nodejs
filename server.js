@@ -1,5 +1,6 @@
 var http = require('http');
 var url = require('url');
+var port = 8888;
 
 
 function start(route) {
@@ -13,8 +14,8 @@ function start(route) {
         res.write("Hello World!");
         res.end();
         
-    }).listen(8888);
-    console.log("Server has started.");
+    }).listen(port);
+    console.log("Server has started on port " + port + ".");
 }
 
 exports.start = start;
